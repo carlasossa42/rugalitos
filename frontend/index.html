@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rugalitos | Tienda de Mascotas</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="logo">Rugalitos</div>
+      <nav class="navegacion">
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Todo para tus mascotas favoritas</h1>
+        <p>Descubre productos seleccionados con amor para perros y gatos.</p>
+        <button type="button" id="ver-productos">Ver productos</button>
+      </section>
+
+      <section id="productos" class="catalogo">
+        <h2>Nuestros favoritos</h2>
+        <div class="grid-productos" data-product-grid>
+          <!-- Las tarjetas se insertan desde script.js -->
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacto" class="pie">
+      <p>&copy; <span id="anio"></span> Rugalitos. Todos los derechos reservados.</p>
+      <a href="mailto:hola@rugalitos.cl">hola@rugalitos.cl</a>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
