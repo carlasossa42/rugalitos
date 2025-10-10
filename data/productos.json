@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nombre": "Collar Reflectante",
+    "precio_clp": 12990,
+    "imagen": "https://via.placeholder.com/300x200?text=Collar"
+  },
+  {
+    "id": 2,
+    "nombre": "Juguete de Cuerda",
+    "precio_clp": 8990,
+    "imagen": "https://via.placeholder.com/300x200?text=Juguete"
+  },
+  {
+    "id": 3,
+    "nombre": "Cama Acolchada",
+    "precio_clp": 34990,
+    "imagen": "https://via.placeholder.com/300x200?text=Cama"
+  },
+  {
+    "id": 4,
+    "nombre": "Plato Antideslizante",
+    "precio_clp": 6990,
+    "imagen": "https://via.placeholder.com/300x200?text=Plato"
+  },
+  {
+    "id": 5,
+    "nombre": "Arena Ecológica",
+    "precio_clp": 15990,
+    "imagen": "https://via.placeholder.com/300x200?text=Arena"
+  },
+  {
+    "id": 6,
+    "nombre": "Snack Natural",
+    "precio_clp": 4990,
+    "imagen": "https://via.placeholder.com/300x200?text=Snack"
+  },
+  {
+    "id": 7,
+    "nombre": "Shampoo Hipoalergénico",
+    "precio_clp": 11990,
+    "imagen": "https://via.placeholder.com/300x200?text=Shampoo"
+  },
+  {
+    "id": 8,
+    "nombre": "Transportadora Plegable",
+    "precio_clp": 45990,
+    "imagen": "https://via.placeholder.com/300x200?text=Transportadora"
+  },
+  {
+    "id": 9,
+    "nombre": "Arnés Ajustable",
+    "precio_clp": 18990,
+    "imagen": "https://via.placeholder.com/300x200?text=Arnes"
+  },
+  {
+    "id": 10,
+    "nombre": "Pelota Interactiva",
+    "precio_clp": 5990,
+    "imagen": "https://via.placeholder.com/300x200?text=Pelota"
+  }
+]
