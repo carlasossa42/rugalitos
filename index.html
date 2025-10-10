@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rugalitos | Tienda para amantes de las mascotas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="inicio">
+      <nav class="nav">
+        <div class="logo">Rugalitos</div>
+        <button class="nav__toggle" aria-label="Abrir menú" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#carrito">Carrito</a></li>
+          <li><a href="#amigos">Amigos de las mascotas</a></li>
+          <li><a href="#historia">Nuestra historia</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="hero__layout">
+        <div class="hero__content">
+          <h1>Todo para consentir a quienes más amas</h1>
+          <p>
+            Descubre productos seleccionados por especialistas y servicios confiables
+            para que la vida de tu mascota sea más feliz, saludable y divertida.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#productos">Ver catálogo</a>
+            <a class="btn btn--secondary" href="#amigos">Conoce a nuestros aliados</a>
+          </div>
+        </div>
+        <figure class="hero__image">
+          <img
+            src="frontend/img/hero-rugalitos.svg"
+            alt="Persona acariciando a su perro feliz"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="productos">
+        <div class="section__header">
+          <h2>Productos destacados</h2>
+          <p>
+            Seleccionamos artículos de calidad para cada etapa de la vida de tus mascotas.
+            Agrega tus favoritos al carrito y completa tu pedido cuando estés listo.
+          </p>
+        </div>
+        <div class="filters">
+          <button class="filter-btn is-active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="perros">Perros</button>
+          <button class="filter-btn" data-filter="gatos">Gatos</button>
+          <button class="filter-btn" data-filter="bienestar">Bienestar</button>
+          <button class="filter-btn" data-filter="accesorios">Accesorios</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="section section--accent" id="carrito">
+        <div class="section__header">
+          <h2>Tu carrito</h2>
+          <p>
+            Revisa los artículos seleccionados antes de finalizar tu compra.
+            Puedes ajustar cantidades o eliminar productos cuando quieras.
+          </p>
+        </div>
+        <div class="cart">
+          <div class="cart__items" id="cartItems"></div>
+          <aside class="cart__summary">
+            <h3>Resumen</h3>
+            <p class="cart__empty" id="cartEmpty">Tu carrito está vacío todavía.</p>
+            <ul class="cart__list" id="cartList"></ul>
+            <div class="cart__totals">
+              <span>Total</span>
+              <strong id="cartTotal">$0.00</strong>
+            </div>
+            <button class="btn btn--primary btn--full" id="checkoutBtn" disabled>
+              Proceder al pago
+            </button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="amigos">
+        <div class="section__header">
+          <h2>Amigos de las mascotas</h2>
+          <p>
+            Aliados apasionados por el bienestar animal que ofrecen servicios certificados.
+          </p>
+        </div>
+        <div class="partner-grid" id="partnerGrid"></div>
+      </section>
+
+      <section class="section section--story" id="historia">
+        <div class="story">
+          <div class="story__content">
+            <h2>Nuestra historia</h2>
+            <p>
+              Rugalitos nació en 2019 como un pequeño emprendimiento familiar en Medellín.
+              Empezamos curando productos artesanales para los perritos del barrio y, gracias
+              a la confianza de la comunidad, crecimos hasta convertirnos en una plataforma
+              que conecta a cuidadores, rescatistas y emprendimientos locales.
+            </p>
+            <p>
+              Nuestro propósito es crear una red solidaria donde cada compra aporte a los
+              refugios aliados y donde las familias encuentren recomendaciones honestas para
+              tomar mejores decisiones de cuidado.
+            </p>
+            <p>
+              Hoy seguimos guiándonos por esa misión: impulsar proyectos responsables,
+              compartir conocimiento y celebrar el amor incondicional que sentimos por
+              nuestras mascotas.
+            </p>
+          </div>
+          <div class="story__image" role="presentation"></div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contacto">
+        <div class="section__header">
+          <h2>Contacto</h2>
+          <p>
+            ¿Tienes dudas, propuestas o quieres sumarte a nuestra red de aliados?
+            Escríbenos y te responderemos en menos de 24 horas.
+          </p>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+          </div>
+          <div class="form-group">
+            <label for="reason">¿Cómo podemos ayudarte?</label>
+            <select id="reason" name="reason" required>
+              <option value="" selected disabled>Selecciona una opción</option>
+              <option value="order">Estado de mi pedido</option>
+              <option value="ally">Quiero ser aliado</option>
+              <option value="support">Soporte general</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" placeholder="Cuéntanos más"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>Rugalitos</strong>
+        <p>Hecho con amor para mascotas y sus familias.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#historia">Nuestra historia</a>
+        <a href="#contacto">Contáctanos</a>
+        <a href="mailto:hola@rugalitos.com">hola@rugalitos.com</a>
+      </div>
+      <p class="footer__legal">© <span id="currentYear"></span> Rugalitos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
