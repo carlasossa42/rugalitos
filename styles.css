@@ -61,6 +61,14 @@ img {
   z-index: 1;
 }
 
+.hero__layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(2rem, 6vw, 5rem);
+  flex-wrap: wrap;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -137,6 +145,7 @@ img {
 
 .hero__content {
   max-width: 600px;
+  flex: 1 1 320px;
 }
 
 .hero__content h1 {
@@ -148,13 +157,40 @@ img {
 .hero__content p {
   font-size: clamp(1rem, 2.2vw, 1.2rem);
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(47, 42, 42, 0.72);
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.hero__image {
+  flex: 1 1 280px;
+  max-width: min(480px, 100%);
+  margin: 0;
+  position: relative;
+}
+
+.hero__image::before {
+  content: "";
+  position: absolute;
+  inset: -8% -6% -10% -10%;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 48% 52% 42% 58% / 46% 40% 60% 54%;
+  filter: blur(0.5px);
+  z-index: 0;
+}
+
+.hero__image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  border-radius: 36px;
+  box-shadow: 0 24px 50px rgba(116, 59, 34, 0.2);
+  object-fit: cover;
 }
 
 .btn {
@@ -580,6 +616,19 @@ select:focus {
 }
 
 @media (max-width: 768px) {
+  .hero__layout {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
   .nav__toggle {
     display: inline-flex;
   }
@@ -627,6 +676,10 @@ select:focus {
 @media (max-width: 520px) {
   .hero {
     padding-bottom: 5rem;
+  }
+
+  .hero__image::before {
+    inset: -6% -8% -12% -6%;
   }
 
   .hero__actions {
